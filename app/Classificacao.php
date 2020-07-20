@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Classificacao extends Model
 {
     protected $fillable = [
-        'nome'
+        'nome','idade'
     ];
+
+    public function filme(){
+        return $this->belongsTo('App\Filmes','classificacaos_id');
+    }
 }

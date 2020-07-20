@@ -9,4 +9,10 @@ class Diretor extends Model
     protected $fillable = [
         'nome'
     ];
+
+    public function filme(){
+        return $this->belongsTo('App\Filmes','diretors_id');
+    }
+    
+    
 }
