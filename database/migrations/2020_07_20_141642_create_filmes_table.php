@@ -19,8 +19,6 @@ class CreateFilmesTable extends Migration
             $table->string('subtitulo');
             $table->integer('ano');
             $table->string('sinopse');
-            $table->unsignedBigInteger('classificacaos_id');
-            $table->unsignedBigInteger('diretors_id');
             $table->foreignId('classificacaos_id')->constrained('classificacaos')->onDelete('cascade');
             $table->foreignId('diretors_id')->constrained('diretors')->onDelete('cascade');
             $table->timestamps();
