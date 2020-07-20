@@ -15,6 +15,7 @@ class CreateDiretorsTable extends Migration
     {
         Schema::create('diretors', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
             $table->timestamps();
         });
     }
