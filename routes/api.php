@@ -1,19 +1,13 @@
 <?php
+//rotas para a api de diretor
+Route::apiResource('diretor','api\DiretorController');
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
+//rotas para a api de atores
+Route::apiResource('ator','api\AtoresController');
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+//rotas para api de  classificacao
+Route::apiResource('classificacao','api\ClassificacaoController');
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//rotas para a api de filmes
+
+Route::apiResource('filme','api\FilmeController');
